@@ -1,0 +1,509 @@
+/* ======================
+   Variáveis
+   ====================== */
+   :root {
+    --primary: #0A5573;
+    --secondary: #594302;
+    --dark-brown: #402A01;
+    --darker-brown: #261501;
+    --light-gray: #BFBCBA;
+}
+
+/* ======================
+   Estilos Globais
+   ====================== */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    color: var(--darker-brown);
+}
+
+/* ======================
+   Navbar
+   ====================== */
+.navbar {
+    background-color: #593C41;
+}
+
+.navbar-brand {
+    color: #fff;
+}
+
+.navbar-nav .nav-link {
+    color: #fff;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #BF9A84;
+}
+
+/* ======================
+   Hero Section (Página Inicial)
+   ====================== */
+.hero-section {
+    background: linear-gradient(rgba(10, 85, 115, 0.8), rgba(10, 85, 115, 0.8)),
+                url('https://images.unsplash.com/photo-1450778869180-41d0601e046e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    margin-bottom: 40px;
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-section p {
+    font-size: 1.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* ======================
+   Cards de Animais
+   ====================== */
+.container {
+    padding: 0 15px;
+    margin-bottom: 50px;
+}
+
+.card {
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    margin-bottom: 30px;
+    background-color: white;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card-img-top {
+    height: 250px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-title {
+    color: var(--primary);
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.card-text {
+    color: var(--dark-brown);
+    margin-bottom: 20px;
+}
+
+.btn-adopt {
+    display: inline-block;
+    background-color: var(--secondary);
+    color: white;
+    padding: 10px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.btn-adopt:hover {
+    background-color: var(--dark-brown);
+    color: white;
+    transform: scale(1.05);
+}
+
+/* ======================
+   Hero Section (Login)
+   ====================== */
+.login-hero {
+    background: linear-gradient(rgba(10, 85, 115, 0.8), rgba(10, 85, 115, 0.8)), 
+                url('https://images.unsplash.com/photo-1477884213360-7e9d7dcc1e48?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+    margin-bottom: 40px;
+}
+
+.login-hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* ======================
+   Formulário de Login
+   ====================== */
+.login-container {
+    max-width: 500px;
+    margin: 0 auto 50px;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.login-container h2 {
+    color: var(--primary);
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--dark-brown);
+    font-weight: 600;
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--light-gray);
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: var(--primary);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(10, 85, 115, 0.2);
+}
+
+.btn-login {
+    display: block;
+    width: 100%;
+    background-color: var(--secondary);
+    color: white;
+    padding: 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.btn-login:hover {
+    background-color: var(--dark-brown);
+    transform: translateY(-2px);
+}
+
+.login-options {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.login-options a {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 600;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.login-options a:hover {
+    color: var(--secondary);
+    text-decoration: underline;
+}
+
+/* ======================
+   Hero Section (Registro)
+   ====================== */
+.register-hero {
+    background: linear-gradient(rgba(10, 85, 115, 0.8), rgba(10, 85, 115, 0.8)), 
+                url('https://images.unsplash.com/photo-1583511655826-05700442b31b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+    margin-bottom: 40px;
+}
+
+.register-hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* ======================
+   Formulário de Registro
+   ====================== */
+.register-container {
+    max-width: 600px;
+    margin: 0 auto 50px;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.register-container h2 {
+    color: var(--primary);
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.form-col {
+    flex: 0 0 50%;
+    padding-right: 15px;
+    padding-left: 15px;
+    max-width: 50%;
+}
+
+.btn-register {
+    display: block;
+    width: 100%;
+    background-color: var(--secondary);
+    color: white;
+    padding: 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.btn-register:hover {
+    background-color: var(--dark-brown);
+    transform: translateY(-2px);
+}
+
+.register-options {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.register-options a {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.register-options a:hover {
+    color: var(--secondary);
+    text-decoration: underline;
+}
+
+.terms-text {
+    font-size: 0.9rem;
+    color: var(--darker-brown);
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* ======================
+   Footer
+   ====================== */
+footer {
+    background-color: var(--primary);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* ======================
+   Responsividade
+   ====================== */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 60px 20px;
+    }
+
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+
+    .hero-section p {
+        font-size: 1.2rem;
+    }
+
+    .login-hero {
+        padding: 60px 20px;
+    }
+    
+    .login-hero h1 {
+        font-size: 2rem;
+    }
+    
+    .login-container {
+        padding: 20px;
+        margin: 0 15px 40px;
+    }
+
+    .register-hero {
+        padding: 60px 20px;
+    }
+    
+    .register-hero h1 {
+        font-size: 2rem;
+    }
+    
+    .register-container {
+        padding: 20px;
+        margin: 0 15px 40px;
+    }
+    
+    .form-col {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+/* BAGUNÇA */
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(rgba(10, 85, 115, 0.8), rgba(10, 85, 115, 0.8)), 
+                url('https://images.unsplash.com/photo-1450778869180-41d0601e046e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    margin-bottom: 40px;
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-section p {
+    font-size: 1.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Cards */
+.container {
+    padding: 0 15px;
+    margin-bottom: 50px;
+}
+
+.card {
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    margin-bottom: 30px;
+    background-color: white;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card-img-top {
+    height: 250px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-title {
+    color: var(--primary);
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.card-text {
+    color: var(--dark-brown);
+    margin-bottom: 20px;
+}
+
+.btn-adopt {
+    display: inline-block;
+    background-color: var(--secondary);
+    color: white;
+    padding: 10px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.btn-adopt:hover {
+    background-color: var(--dark-brown);
+    color: white;
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 60px 20px;
+    }
+    
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-section p {
+        font-size: 1.2rem;
+    }
+}
