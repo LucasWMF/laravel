@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('nome', 100);
             $table->string('especie', 100);
             $table->string('raca', 100);
-            $table->int('idade');
+            $table->string('idade', 100);
             $table->string('sexo', 100);
             $table->string('porte', 100);
             $table->string('descricao', 200);

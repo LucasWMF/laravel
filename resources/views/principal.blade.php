@@ -6,8 +6,8 @@
       <p>Faça a diferença na vida de um animal abandonado. Dê a eles uma nova chance!</p>
     </div>
 
-    <!-- Cards de Adoção -->
-    <div class="container">
+<!-- Cards de Adoção -->
+<div class="container">
       <div class="row">
         <div class="col-md-4">
           <div class="card">
@@ -73,6 +73,37 @@
             </div>
           </div>
         </div>
+        <div class="col-md-4">
+  <div class="card">
+    <img src="https://static.mundoeducacao.uol.com.br/mundoeducacao/2021/03/1-animal.jpg" class="card-img-top" alt="Esquilo adulto para adoção">
+    <div class="card-body">
+      <h5 class="card-title">Esquilo Adulto</h5>
+      <p class="card-text">Esquilo adulto disponível para adoção. Ele é ágil, curioso e perfeito para quem tem espaço e paciência para acompanhar sua energia.</p>
+      <a href="#" class="btn-adopt">Quero Adotar</a>
+    </div>
+  </div>
+</div>
+<div class="col-md-4">
+  <div class="card">
+    <img src="https://www.racoesreis.com.br/wordpress/wp-content/uploads/gato-origem.jpg" class="card-img-top" alt="Gato Siaêmes pequeno para adotar">
+    <div class="card-body">
+      <h5 class="card-title">Gato Siamês</h5>
+      <p class="card-text">Filhote de Siamês, muito carinhoso e sociável. Ideal para quem busca um companheiro leal e afetuoso.</p>
+      <a href="#" class="btn-adopt">Quero Adotar</a>
+    </div>
+  </div>
+</div>
+<div class="col-md-4">
+  <div class="card">
+    <img src="https://s2-g1.glbimg.com/JdmLQ1EqaTZ825ZQ38u6jVlWwfI=/0x0:1281x743/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2020/E/w/VCP6bwQTW7W8RULyvwvw/mico.jpg" class="card-img-top" alt="Mico Leão Dourado para Adotar">
+    <div class="card-body">
+      <h5 class="card-title">Mico Leão Dourado</h5>
+      <p class="card-text">O Mico Leão Dourado é uma espécie rara e encantadora. Ideal para quem possui um espaço adequado e deseja contribuir para a preservação dessa espécie.</p>
+      <a href="#" class="btn-adopt">Quero Adotar</a>
+    </div>
+  </div>
+</div>
+
       </div>
     </div>
 

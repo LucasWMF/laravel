@@ -1,4 +1,5 @@
 @extends('_partials/body')
+@extends('_partials/petsadocao')
 @section('conteudo')
 
     <!-- Seção Hero -->

@@ -1,4 +1,5 @@
 @extends('_partials/body')
+@extends('_partials/')
 @section('conteudo')
 
     <!-- Seção Hero -->
@@ -7,8 +8,8 @@
       <p>Faça a diferença na vida de um animal abandonado. Dê a eles uma nova chance!</p>
     </div>
 
-    <!-- Cards de Adoção -->
-    <div class="container">
+<!-- Cards de Adoção -->
+<div class="container">
       <div class="row">
         <div class="col-md-4">
           <div class="card">
