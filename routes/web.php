@@ -18,3 +18,7 @@ Route::get('/', [App\Http\Controllers\Principal::class, 'principal']);
 Route::get('cliente/add', [App\Http\Controllers\ClienteController::class, 'add'])->name('add-cliente');
 
 Route::post('cliente/add', [App\Http\Controllers\ClienteController::class, 'store'])->name('store-cliente');
+
+Route::get('cliente/list', [App\Http\Controllers\ClienteController::class, 'list'])->name('list-cliente');
+
+Route::get('cliente/remove/{id}', [App\Http\Controllers\ClienteController::class, 'remove'])->name('remove-cliente');

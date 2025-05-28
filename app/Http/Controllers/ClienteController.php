@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\ClienteModel; //importar cliente do model !important
+use App\Models\ClienteModel; //importar cliente do model
 
 class ClienteController extends Controller
 {
@@ -12,10 +12,19 @@ class ClienteController extends Controller
     }
 
     function store(Request $dados){
-        // Request = receber a requisição e determinar a variável que será postado os dados
-        // dd($dados->all());
-        // modo de teste
         $cliente = new ClienteModel();
         $cliente->create($dados->all());
+    }
+
+    function list() {
+        $clientes = ClienteModel::all();
+        // dd($clientes);
+        
+        return view('list-cliente', ['clientes' => $clientes ]);
+    }
+
+    function remove($id){
+        ClienteModel::destroy($id);
+        return redirect()->route('list-cliente');
     }
 }
