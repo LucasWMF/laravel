@@ -27,7 +27,7 @@
                 <td>{{ $veiculo->cor }}</td>                
                 <td>
                     <a href="/veiculo/remove/{{ $veiculo->id }}">Excluir</a>
-                    <a href="/veiculo/update/{{ $veiculo->id }}">Atualizar</a>
+                    <a href="/veiculo/editar/{{ $veiculo->id }}">Atualizar</a>
                 </td>
             </tr>
         @endforeach
