@@ -16,7 +16,7 @@ return new class extends Migration
             $table->timestamps();
             $table->string('nome', 255);
             $table->string('cpf', 255);
-            $table->string('telefone', 255);
+            $table->string('tel', 255);
             $table->string('email', 255);
         });
     }

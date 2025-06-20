@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\ProprietarioModel;
 
 class ProprietarioController extends Controller
 {
@@ -13,12 +14,12 @@ class ProprietarioController extends Controller
     function store(Request $dados){
         if ($dados->id == '') {
             //fazemos ação de create aqui...
-            $proprietario = new ProprietarioModel();
-            $proprietario->create($dados->all());
+            $proprietarios = new ProprietarioModel();
+            $proprietarios->create($dados->all());
         } else {
             //fazemos a ação de update aqui
-            $proprietario = ProprietarioModel::find($dados->id); //localiza o registro
-            $update = $proprietario->update($dados->all); //atualiza
+            $proprietarios = ProprietarioModel::find($dados->id); //localiza o registro
+            $update = $proprietarios->update($dados->all); //atualiza
         }
         
         //recupera todos os registros atualizados

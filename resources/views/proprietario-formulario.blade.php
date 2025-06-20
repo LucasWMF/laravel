@@ -2,19 +2,19 @@
     @csrf
 
     <!-- {{-- Essa linha irá recuperar o ID e deixar invisível --}} -->
-    <input type="hidden" name="id" value="{{ $veiculo->id ?? old('id') }}">
+    <input type="hidden" name="id" value="{{ $proprietario->id ?? old('id') }}">
+    
+    <label for="nome">Nome</label>
+    <input type="text" name="nome" id="nome" value="{{ $proprietario-> nome ?? old('nome') }}">
 
-    <label for="nome">Nome do Proprietário</label>
-    <input type="text" name="nome" id="nome" value="{{ old('nome') }}" required>
+    <label for="cpf">CPF</label>
+    <input type="text" name="cpf" id="cpf" value="{{ $proprietario-> cpf ?? old('cpf') }}">
 
-    <label for="cpf">CPF do Proprietário</label>
-    <input type="text" name="cpf" id="cpf" value="{{ old('cpf') }}" required>
+    <label for="tel">Telefone</label>
+    <input type="text" name="tel" id="tel" value="{{ $proprietario-> tel ?? old('tel') }}">
 
-    <label for="telefone">Telefone do Proprietário</label>
-    <input type="text" name="telefone" id="telefone" value="{{ old('telefone') }}" required>
-
-    <label for="email">Email do Proprietário</label>
-    <input type="email" name="email" id="email" value="{{ old('email') }}" required>
+    <label for="email">Email</label>
+    <input type="text" name="email" id="email" value="{{ $proprietario-> email ?? old('email') }}">
 
     <button type="submit">Cadastrar</button>
 </form>
