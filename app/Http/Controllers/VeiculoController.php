@@ -42,9 +42,11 @@ class VeiculoController extends Controller
     }
     
     function editar($id){
-				$veiculo = VeiculoModel::find($id);
+		// $veiculos = VeiculoModel::find($id);
+		$veiculo = VeiculoModel::find($id);
+        // dd($veiculo->all());
 
-        return redirect()->route('veiculo-formulario', ['veiculo' => $veiculo]);
+        return view('veiculo-formulario', ['veiculo' => $veiculo]);
         //vamos enviar o $veiculo que veio do BD para a página veiculo-formulario
     }
 }
