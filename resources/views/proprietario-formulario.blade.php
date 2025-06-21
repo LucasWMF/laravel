@@ -1,20 +1,34 @@
-<form action="{{ route('proprietario-store') }}" method="POST">
+@extends('layouts.app')
+@section('content')
+
+  <form action="{{ route('proprietario-store') }}" method="POST">
+    <h2 class="mb-4">Cadastrar Proprietário</h2>
     @csrf
 
-    <!-- {{-- Essa linha irá recuperar o ID e deixar invisível --}} -->
+    {{-- Campo oculto para ID --}}
     <input type="hidden" name="id" value="{{ $proprietario->id ?? old('id') }}">
-    
-    <label for="nome">Nome</label>
-    <input type="text" name="nome" id="nome" value="{{ $proprietario-> nome ?? old('nome') }}">
 
-    <label for="cpf">CPF</label>
-    <input type="text" name="cpf" id="cpf" value="{{ $proprietario-> cpf ?? old('cpf') }}">
+    <div class="mb-3">
+    <label for="nome" class="form-label">Nome</label>
+    <input type="text" class="form-control" name="nome" id="nome" value="{{ $proprietario->nome ?? old('nome') }}">
+    </div>
 
-    <label for="tel">Telefone</label>
-    <input type="text" name="tel" id="tel" value="{{ $proprietario-> tel ?? old('tel') }}">
+    <div class="mb-3">
+    <label for="cpf" class="form-label">CPF</label>
+    <input type="text" class="form-control" name="cpf" id="cpf" value="{{ $proprietario->cpf ?? old('cpf') }}">
+    </div>
 
-    <label for="email">Email</label>
-    <input type="text" name="email" id="email" value="{{ $proprietario-> email ?? old('email') }}">
+    <div class="mb-3">
+    <label for="tel" class="form-label">Telefone</label>
+    <input type="text" class="form-control" name="tel" id="tel" value="{{ $proprietario->tel ?? old('tel') }}">
+    </div>
 
-    <button type="submit">Cadastrar</button>
-</form>
+    <div class="mb-3">
+    <label for="email" class="form-label">Email</label>
+    <input type="email" class="form-control" name="email" id="email" value="{{ $proprietario->email ?? old('email') }}">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Cadastrar</button>
+  </form>
+
+@endsection

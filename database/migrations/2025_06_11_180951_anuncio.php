@@ -18,6 +18,7 @@ return new class extends Migration
             $table->text('descricao');
             $table->decimal('preco', 10, 2);
             $table->date('data_publicacao'); 
+            
             $table->unsignedBigInteger('id_proprietario');
             $table->unsignedBigInteger('id_veiculo');
             
