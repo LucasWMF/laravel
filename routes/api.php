@@ -17,3 +17,36 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+// GET
+// Route::get('/cli', function () {
+//     return [
+//         'nomes' => [
+//             'Lucas',
+//             'Maria',
+//             'José',
+//             'João',
+//             'Paulo',
+//             'Pedro',
+//             'Ana',
+//             'Elias',
+//             'Moisés',
+//             'Abraão',
+//         ],
+//     ];
+// });
+
+Route::get('/cliente', function () {
+    return [
+        ['nome' => 'Lucas'],
+        ['nome' => 'Maria'],
+        ['nome' => 'José'],
+        ['nome' => 'João'],
+        ['nome' => 'Paulo'],
+        ['nome' => 'Pedro'],
+        ['nome' => 'Ana'],
+        ['nome' => 'Elias'],
+        ['nome' => 'Moisés'],
+        ['nome' => 'Abraão'],
+    ];
+});
