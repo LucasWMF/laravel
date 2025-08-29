@@ -27,3 +27,8 @@ Route::prefix('usuario')->group(function(){
     Route::post('editar', [App\Http\Controllers\UsuarioController::class, 'editar']);
     Route::post('perfil', [App\Http\Controllers\UsuarioController::class, 'perfil']);
 });
+
+Route::prefix('post')->group(function(){
+    Route::post('create', [App\Http\Controllers\PostController::class, 'create']);
+    
+});
