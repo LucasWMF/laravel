@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Post;
 use App\Http\Requests\StorePostRequest;
 use App\Http\Requests\UpdatePostRequest;
-use App\Models\Post;
 use Illuminate\Http\Request;
-
+use Illuminate\Http\Hash;
 
 class PostController extends Controller
 {
@@ -15,34 +15,35 @@ class PostController extends Controller
      */
     public function index()
     {
-        //
+        $posts = Post::with('user')->orderBy('created_at', 'desc')->get();
+        return response()->json($posts);
     }
 
     /**
      * Show the form for creating a new resource.
      */
-    public function create(Request $request)
+    public function create()
     {
-        $dados = $request->validate([
-            'description' => 'required|string|max:255'
-        ]);
-        
-        $dados['picture'] = $request['picture'];
-
-        $post = Post::create($dados);
-
-        return response()->json([
-            'message'=>'Postagem realizada!',
-            'post'=> $post,
-        ], 201);
+        //
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StorePostRequest $request)
+    public function store(Request $request)
     {
-        //
+        $dados = $request->validate([
+            'description' => 'required|string|max:255',
+            'picture' => 'nullable|string|max:255',
+        ]);
+
+        $post = Post::create([
+            'description' => $dados['description'],
+            'picture' => $dados['picture'] ?? '',
+            'user_id' => $request->user()->id,
+        ]);
+
+        return response()->json(Post::with('user')->find($post->id), 201);
     }
 
     /**

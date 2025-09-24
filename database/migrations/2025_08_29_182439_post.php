@@ -16,6 +16,7 @@ return new class extends Migration
             $table->timestamps();
             $table->string('description', 255);
             $table->string('picture', 255);
+            $table->string('user_id', 255);
         });
     }
 
